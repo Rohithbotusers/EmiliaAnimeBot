@@ -21,7 +21,7 @@ from telegram.ext import (CallbackContext, CallbackQueryHandler, CommandHandler,
 from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
 from telegram.utils.helpers import escape_markdown
 
-EMILIA_IMG = "https://telegra.ph/file/7e76ee255dca9249beeb1.jpg"
+EMILIA_IMG = "https://telegra.ph/file/bec15d2c0a2fcb63ec99c.jpg"
 
 
 def get_readable_time(seconds: int) -> str:
@@ -54,8 +54,8 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Hey There!` [🧑🏻](https://telegra.ph/file/40fd72c287704c378c4f2.jpg) 
-`My name is` *Bel Daizora*`
+`Hey There!` [🧑🏻](https://telegra.ph/file/bec15d2c0a2fcb63ec99c.jpg) 
+`My name is` *AIGER AKABANE*`
 `I am an cartoon Themed group management bot.`
 You can find my list of available commands with` *🔐Commands*   
 """
@@ -63,7 +63,7 @@ You can find my list of available commands with` *🔐Commands*
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ADD Bel Daizora TO YOUR GROUP ➕️",url="t.me/BelDaizoraRobot?startgroup=true"
+            text="➕️ ADD AIGER AKABANE TO YOUR GROUP ➕️",url="http://t.me/Aigerakabanethebladerbot?startgroup=true"
         ),
     ],
     [
@@ -73,7 +73,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-          text="📮 Updates", url="https://t.me/Zbotscreator"
+          text="📮 Updates", url="https://t.me/FreeLogogiveway"
         ),
       
         InlineKeyboardButton(
@@ -83,12 +83,17 @@ buttons = [
          
     [
        InlineKeyboardButton(
-           text="🐱 Support", url="https://t.me/bbttbotssuppportandhelp"
+           text="🐱 Support", url="https://t.me/freelogogiveaway"
          ),
     ],
     [
       InlineKeyboardButton(
-          text="My owner", url=,"https://t.me/Rohith_no_1"
+           text="MY OWNER", url="https://t.me/TharunK5614L"
+         ),
+    ],
+    [
+        InlineKeyboardButton(
+          text="✒ Source", callback_data="source_"
         ),
      
     ],
@@ -96,12 +101,12 @@ buttons = [
 
 
 HELP_STRINGS = """
-`Hey there! My name is` [Bel Daizora!](https://telegra.ph/file/40fd72c287704c378c4f2.jpg) 
+`Hey there! My name is` [aiger akabane!](https://telegra.ph/file/bec15d2c0a2fcb63ec99c.jpg) 
 I'm a Half Elf and help admins manage their groups with Some Powerful Features! \n`Have a look at the following for an idea of some of the things I can help you with.`"""
 
 DONATE_STRING = """
 Heya, glad to hear you want to donate!
-I'd Like you to Donate that Money to @ctzfamily. 
+I'd Like you to Donate that Money to Some Charity. 
 Thanks!
 """
 
@@ -213,17 +218,20 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_photo(
-            EMILIA_IMG, caption= "ʏᴇᴀ Bel Daizora ʀᴇᴀᴅʏ ᴡʜᴀᴛ ɪ ᴅᴏ❤\nI am Awake Since: <code>{}</code>".format(
+            EMILIA_IMG, caption= "ʏᴇᴀ  AIGER AKABANE ʀᴇᴀᴅʏ ᴡʜᴀᴛ ɪ ᴅᴏ❤\nI am Awake Since</code>: <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                   [
-                  InlineKeyboardButton(text="【 ✗Sᴜᴘᴘᴏʀᴛ✗ 】", url="https://t.me/bbttbotssuppportandhelp")
+                  InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="https://t.me/freelogogiveaway")
                   ],
                   [
-                  InlineKeyboardButton(text="【 ✗Cʀᴇᴀᴛᴇʀ✗ 】", url="https://t.me/Rohith_no_1
+                  InlineKeyboardButton(text="OWNER", url="https://t.me/TharunK5614L")
+                  ],
+                  [
+                  InlineKeyboardButton(text="Sᴏᴜʀᴄᴇ", url="https://github.com/IzumiCypherX/EmiliaAnimeBot")
                   ]
                 ]
             ),
@@ -357,14 +365,14 @@ def gabi_about_callback(update, context):
     query = update.callback_query
     if query.data == "gabi_":
         query.message.edit_text(
-            text=""" ℹ️ I'm *Bel Daizora*, a powerful group management bot built to help you manage your group easily.
+            text=""" ℹ️ I'm *AIGER AKABANE*, a powerful group management bot built to help you manage your group easily.
                  \n❍ I can restrict users.
                  \n❍ I can greet users with customizable welcome messages and even set a group's rules.
                  \n❍ I have an advanced anti-flood system.
                  \n❍ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
                  \n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  \n❍ I check for admins' permissions before executing any command and more stuffs
-                 \n\nIf you have any question about *Bel Daizora*, let us know at .""",
+                 \n\nIf you have any question about *AIGER AKABANE*, let us know at .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -390,8 +398,8 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..👩‍💼 I'm *Bel Daizora*
-                 \nMy Source Code Can be Found at Github at this [Link](https://github.com/ctzfamily/yumi_robot""",
+            text=""" Hi..👩‍💼 I'm *AIGER AKABANE*
+                 \nMy Source Code Can be Found at Github at this [Link](https://github.com/IzumiCypherX/EmiliaAnimeBot""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -691,7 +699,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Bel Daizora is Back Online💼")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "AIGER AKABANE is Back Online💼")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
