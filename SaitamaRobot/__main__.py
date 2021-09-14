@@ -53,54 +53,51 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Hey There!` [🧑](https://telegra.ph/file/1682027883777783a43a9.mp4) `My name is` *VALT AOI*
-`I am an cartoon Themed group management bot.
-Managed by Pigasus Updates for Your Telegram Group
-Join @pigasusupdates & @pigasussupport.
+`Hey There!` ! [👨‍💻](https://telegra.ph/file/11e14d91e18dfe8b2badb.jpg) `My name is` *Aiger Akabane*
+`I am Anime Themed group management bot.
 You can find my list of available commands with! Hit` *🔐Commands*   
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="[ADD VALT AOI TO YOUR GROUP]",url="t.me/VALTAOITHEBOT?startgroup=true"),
+            text="Add Aiger Akabane To Your Group",url="http://t.me/AigerAkabaneRobot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(
-              text="🔐 Command & Help", callback_data="help_back"),
+              text="🔐 Commands", callback_data="help_back"),
      
     ],
     [
         InlineKeyboardButton(
-            text="[UPDATE CHANNEL ]", url="https://t.me/pigasusUpdates"),
+            text="📢 UPDATES", url="https://t.me/AigerAkabaneUpdates"),
     ],
     [
         InlineKeyboardButton(
-            text="[ SUPPORT CHAT ]", url="https://t.me/pigasusSupport"),
+            text="🐱 SUPPORT CHAT", url="https://t.me/AigerAkabaneSupport"),
           
 
 
 InlineKeyboardButton(
-            text="[ CHECK MY FRIEND ]", url="http://t.me/ShuKurenaithebot"
+            text="📰 LOGS", url="http://t.me/AigerAkabaneLogs"
         ),
 
     ],
     [
         InlineKeyboardButton(
-                    text="[ ✘BOT Cʀᴇᴀᴛᴇʀ✘ ]", url="https://t.me/Rohith_no_1"
+                    text="Source Code", url="https://t.me/AigerAkabaneUpdates"
         ),
     ],
 ]
 
 
 HELP_STRINGS = """
-`Hey there! My name is` [VALT AOI]("https://telegra.ph/file/1682027883777783a43a9.mp4") 
-I'm a Half Elf and help admins manage their groups with Some Powerful Features! `Have a look at the following for an idea of some of the things I can help you with.`"""
+Hᴇʏ ᴛʜᴇʀᴇ! Mʏ Nᴀᴍᴇ Is [Aiger Akabane]("https://telegra.ph/file/11e14d91e18dfe8b2badb.jpg") 
+I ʜᴇʟᴘ ᴀᴅᴍɪɴs ᴛᴏ ᴍᴀɴᴀɢᴇ ᴛʜᴇɪʀ ɢʀᴏᴜᴘs ᴡɪᴛʜ Sᴏᴍᴇ Pᴏᴡᴇʀғᴜʟ Fᴇᴀᴛᴜʀᴇs! Hᴀᴠᴇ ᴀ ʟᴏᴏᴋ ᴀᴛ ᴛʜᴇ ғᴏʟʟᴏᴡɪɴɢ ғᴏʀ ᴀɴ ɪᴅᴇᴀ ᴏғ sᴏᴍᴇ ᴏғ ᴛʜᴇ ᴛʜɪɴɢs I ᴄᴀɴ ʜᴇʟᴘ ʏᴏᴜ ᴡɪᴛʜ.
+"""
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project via [Paytm](#) or by contacting @Rohith_no_1\
- Supporting isnt always financial! \
- Those who cannot provide monetary support are welcome to help us develop the bot at ."""
+DONATE_STRING = """Heya, glad to hear you want to donate! But we don't want donation.
+"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -185,7 +182,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="⬅️ BACK", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="◀️", callback_data="help_prev")], [InlineKeyboardButton(text="Back", callback_data="help_back")], [InlineKeyboardButton(text="▶️", callback_data="help_next")]]
                     ),
                 )
 
@@ -210,17 +207,14 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_photo(
-            EMILIA_IMG, caption= "`EMILLA is Here For You❤\nI am Awake Since:` <code>{}</code>".format(
+            EMILIA_IMG, caption= "`Aiger Akabane is Here For You\nI am Awake Since:` <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                   [
-                  InlineKeyboardButton(text="[ ✘Sᴜᴘᴘᴏʀᴛ Cʜᴀᴛ✘ ]", url="https://t.me/pigasusSupport")
-                  ],
-                  [
-                  InlineKeyboardButton(text="[ ✘Cʀᴇᴀᴛᴇʀ✘ ]", url="https://t.me/Rohith_no_1")
+                  InlineKeyboardButton(text="[ Sᴜᴘᴘᴏʀᴛ Cʜᴀᴛ ]", url="https://t.me/AigerAkabaneSupport")
                   ]
                 ]
             ),
@@ -309,7 +303,7 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="Back", callback_data="help_back")]]
+                    [[InlineKeyboardButton(text="◀️", callback_data="help_prev")], [InlineKeyboardButton(text="Back", callback_data="help_back")], [InlineKeyboardButton(text="▶️", callback_data="help_next")]]
                 ),
             )
 
@@ -355,14 +349,14 @@ def gabi_about_callback(update, context):
     query = update.callback_query
     if query.data == "gabi_":
         query.message.edit_text(
-            text=""" ℹ️ I'm *VALT AOI*, a powerful group management bot built to help you manage your group easily.
+            text=""" ℹ️ I'm *Aiger Akabane*, a powerful group management bot built to help you manage your group easily.
                  \n❍ I can restrict users.
                  \n❍ I can greet users with customizable welcome messages and even set a group's rules.
                  \n❍ I have an advanced anti-flood system.
                  \n❍ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
                  \n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  \n❍ I check for admins' permissions before executing any command and more stuffs
-                 \n\nIf you have any question about *VALT AOI*, let us know at .""",
+                 \n\nIf you have any question about *Aiger Akabane*, let us know at .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -388,8 +382,8 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..👸 I'm *VALT AOI*
-                 \nHere is the [Sᴜᴘᴘᴏʀᴛ Cʜᴀᴛ](https://t.me/pigasusSupport) .""",
+            text=""" Hi..👸 I'm *Aiger Akabane*
+                 \nHere is the [Sᴜᴘᴘᴏʀᴛ Cʜᴀᴛ](https://t.me/AigerAkabaneSupport) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -461,7 +455,7 @@ def get_help(update: Update, context: CallbackContext):
             chat.id,
             text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="help_back")]]
+                [[InlineKeyboardButton(text="◀️", callback_data="help_prev")], [InlineKeyboardButton(text="Back", callback_data="help_back")], [InlineKeyboardButton(text="▶️", callback_data="help_next")]]
             ),
         )
 
@@ -686,7 +680,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Hᴇʏ Yᴏᴜʀ VALT AOI Is Oɴʟɪɴᴇ")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Hᴇʏ Yᴏᴜʀ Aiger Akabane Is Oɴʟɪɴᴇ")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
