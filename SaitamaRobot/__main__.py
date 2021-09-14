@@ -53,15 +53,15 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Hey There!` ! [👨‍💻](https://telegra.ph/file/11e14d91e18dfe8b2badb.jpg) `My name is` *Aiger Akabane*
-`I am Anime Themed group management bot.
+`Hey There!` ! [👨‍💻](https://telegra.ph/file/7e76ee255dca9249beeb1.jpg) `My name is` *Bel Daizora*
+`I am beyblade Themed group management bot.
 You can find my list of available commands with! Hit` *🔐Commands*   
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="Add Aiger Akabane To Your Group",url="http://t.me/AigerAkabaneRobot?startgroup=true"),
+            text="Add  Bel Daizora To Your Group",url="http://t.me/AigerAkabaneRobot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(
@@ -92,7 +92,7 @@ InlineKeyboardButton(
 
 
 HELP_STRINGS = """
-Hᴇʏ ᴛʜᴇʀᴇ! Mʏ Nᴀᴍᴇ Is [Aiger Akabane]("https://telegra.ph/file/11e14d91e18dfe8b2badb.jpg") 
+Hᴇʏ ᴛʜᴇʀᴇ! Mʏ Nᴀᴍᴇ Is [Bel Daizora]("https://telegra.ph/file/11e14d91e18dfe8b2badb.jpg") 
 I ʜᴇʟᴘ ᴀᴅᴍɪɴs ᴛᴏ ᴍᴀɴᴀɢᴇ ᴛʜᴇɪʀ ɢʀᴏᴜᴘs ᴡɪᴛʜ Sᴏᴍᴇ Pᴏᴡᴇʀғᴜʟ Fᴇᴀᴛᴜʀᴇs! Hᴀᴠᴇ ᴀ ʟᴏᴏᴋ ᴀᴛ ᴛʜᴇ ғᴏʟʟᴏᴡɪɴɢ ғᴏʀ ᴀɴ ɪᴅᴇᴀ ᴏғ sᴏᴍᴇ ᴏғ ᴛʜᴇ ᴛʜɪɴɢs I ᴄᴀɴ ʜᴇʟᴘ ʏᴏᴜ ᴡɪᴛʜ.
 """
 
@@ -207,7 +207,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_photo(
-            EMILIA_IMG, caption= "`Aiger Akabane is Here For You\nI am Awake Since:` <code>{}</code>".format(
+            EMILIA_IMG, caption= "`EMILLA is Here For You\nI am Awake Since:` <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -349,7 +349,7 @@ def gabi_about_callback(update, context):
     query = update.callback_query
     if query.data == "gabi_":
         query.message.edit_text(
-            text=""" ℹ️ I'm *Aiger Akabane*, a powerful group management bot built to help you manage your group easily.
+            text=""" ℹ️ I'm *Bel Daizora*, a powerful group management bot built to help you manage your group easily.
                  \n❍ I can restrict users.
                  \n❍ I can greet users with customizable welcome messages and even set a group's rules.
                  \n❍ I have an advanced anti-flood system.
@@ -382,7 +382,7 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..👸 I'm *Aiger Akabane*
+            text=""" Hi..👸 I'm *Bel Daizora*
                  \nHere is the [Sᴜᴘᴘᴏʀᴛ Cʜᴀᴛ](https://t.me/AigerAkabaneSupport) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -680,7 +680,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Hᴇʏ Yᴏᴜʀ Aiger Akabane Is Oɴʟɪɴᴇ")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Hᴇʏ Yᴏᴜʀ Bel Daizora Is Oɴʟɪɴᴇ")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
